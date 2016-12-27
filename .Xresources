@@ -1,0 +1,22 @@
+URxvt.foreground: white
+URxvt.background: black
+URxvt.secondaryScroll: true
+URxvt.font:     xft:bitstream vera sans mono:size=10:antialias=true
+URxvt.perl-ext-common: mark-urls,tabbedex
+URxvt.urlLauncher: firefoxURxvt.tabbed.saveLines: 1000
+URxvt.tabbed.scrollBar: false
+URxvt.tabbed.secondaryScroll: true
+URxvt.tabbed.urlLauncher: firefox
+URxvt.tabbed.no-tabbedex-keys: true
+URxvt.keysym.Control-t: perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
+urxvt*scrollBar:         false
+urxvt*cursorBlink:        true
+URxvt.termName: rxvt-unicode-256color
+
+rofi.color-enabled: true
+rofi.color-window: argb:0000000, argb:0000000, argb:0000000
+rofi.color-normal: #000000, #00ff00, #000000, #2d2d2d, #00ff00
+rofi.color-active: argb:0000000, #00ff00, #000000, #2d2d2d, #00ff00
+rofi.color-urgent: #000000, #00ff00, #000000, #2d2d2d, #00ff00
