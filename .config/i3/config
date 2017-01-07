@@ -13,6 +13,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id hsetroot -solid '#000000'
 exec --no-startup-id compton -i 0.7
+exec --no-startup-id dunst
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Profile" 6
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Velocity Scaling" 10
 
