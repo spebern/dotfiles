@@ -16,6 +16,7 @@ exec --no-startup-id compton -i 0.7
 exec --no-startup-id dunst
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Profile" 6
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Velocity Scaling" 10
+exec --no-startup-id vmware-user
 
 set $mod Mod4
 
