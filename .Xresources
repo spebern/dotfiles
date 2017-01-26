@@ -14,9 +14,14 @@ URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
 urxvt*scrollBar:         false
 urxvt*cursorBlink:        true
 URxvt.termName: rxvt-unicode-256color
+URxvt.inputMethod: fcitx
+URxvt.preeditType: OverTheSpot
 
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: argb:0000000, argb:0000000, argb:0000000
-rofi.color-normal: #000000, #00ff00, #000000, #2d2d2d, #00ff00
-rofi.color-active: argb:0000000, #00ff00, #000000, #2d2d2d, #00ff00
-rofi.color-urgent: #000000, #00ff00, #000000, #2d2d2d, #00ff00
+rofi.color-window: #273238, #273238, #1e2529
+rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
+rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
+rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
