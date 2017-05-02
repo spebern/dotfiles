@@ -94,9 +94,17 @@ export PATH=~/.rakudobrew/bin:/home/ben/.rakudobrew/moar-nom/install/share/perl6
 alias steam-wine='wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 alias wow='WINEDEBUG=-all __GL_THREADED_OPTIMIZATIONS=1 wine ~/WoW_3.3.5a_rising-gods.de/Wow.exe'
 
-export EDITOR="em"
+export EDITOR="nvim"
 alias em="emacsclient -t"
+alias vim="nvim"
 
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+export PATH=~/.cargo/bin:$PATH
+export PATH=/opt/cmake-basis/bin:$PATH
+export PATH=/home/ben/workspace/torch/install/bin:$PATH
+export PATH=/home/ben/.gem/ruby/2.4.0/bin:$PATH
+
+# no blinking cursor
+echo -e "\033[6 q"
+
+# vmware gui not starting workaround
+export VMWARE_USE_SHIPPED_LIBS='yes'

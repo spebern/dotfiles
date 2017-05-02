@@ -9,14 +9,14 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec --no-startup-id nm-applet
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id hsetroot -solid '#000000'
-exec --no-startup-id compton -i 0.7
+exec --no-startup-id feh --bg-scale /home/ben/Pictures/nanjing.jpg
+exec --no-startup-id compton --backend glx --vsync opengl
 exec --no-startup-id dunst
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Profile" 6
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Velocity Scaling" 10
 exec --no-startup-id vmware-user
+exec --no-startup-id dropbox
 
 set $mod Mod4
 
@@ -35,7 +35,6 @@ font pango:DejaVu Sans Mono 7
 
 #workspace back an forth
 bindsym $mod+z workspace back_and_forth
-bindsym $mod+^ killall -9 skype
 bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
 
 # remove useless titles
@@ -78,10 +77,10 @@ bindsym $mod+u [instance="scratch_term"] scratchpad show
 bindsym $mod+minus scratchpad show
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -90,10 +89,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -102,7 +101,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
