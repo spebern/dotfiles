@@ -1,11 +1,14 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/home/ben/.oh-my-zsh
+if [ "$TMUX" = "" ]; then tmux; fi
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/ben/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="norm"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,11 +54,11 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -71,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -82,29 +85,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#alias em="emacsclient -t"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export TERM=xterm-256color
+export PATH="$PATH:~/.cargo/bin"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+export RUST_SRC_PATH=~/.rust/src
+alias emacs='LC_CTYPE=zh_CN.UTF-8 emacs'
+export MAGICK_OCL_DEVICE=OFF 
 
-unset PERL5LIB
-source ~/perl5/perlbrew/etc/bashrc
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 
-export PATH=~/.rakudobrew/bin:/home/ben/.rakudobrew/moar-nom/install/share/perl6/site/bin:$PATH
-alias steam-wine='wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
-alias wow='WINEDEBUG=-all __GL_THREADED_OPTIMIZATIONS=1 wine ~/WoW_3.3.5a_rising-gods.de/Wow.exe'
+export XAUTHORITY=~/.Xauthority
 
-export EDITOR="nvim"
-alias em="emacsclient -t"
-alias vim="nvim"
-
-export PATH=~/.cargo/bin:$PATH
-export PATH=/opt/cmake-basis/bin:$PATH
-export PATH=/home/ben/workspace/torch/install/bin:$PATH
-export PATH=/home/ben/.gem/ruby/2.4.0/bin:$PATH
-
-# no blinking cursor
-echo -e "\033[6 q"
-
-# vmware gui not starting workaround
-export VMWARE_USE_SHIPPED_LIBS='yes'

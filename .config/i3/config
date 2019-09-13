@@ -10,13 +10,10 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id feh --bg-scale /home/ben/Pictures/nanjing.jpg
 exec --no-startup-id compton --backend glx --vsync opengl
-exec --no-startup-id dunst
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Profile" 6
 exec --no-startup-id xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Velocity Scaling" 10
-exec --no-startup-id vmware-user
-exec --no-startup-id dropbox
+exec --no-startup-id dunst
 
 set $mod Mod4
 
@@ -24,7 +21,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 7
+font pango:DejaVu Sans Mono 5
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -33,9 +30,12 @@ font pango:DejaVu Sans Mono 7
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-#workspace back an forth
+# workspace back an forth
 bindsym $mod+z workspace back_and_forth
 bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_and_forth
+
+# Moving workspaces between screens
+bindsym $mod+p move workspace to output right
 
 # remove useless titles
 new_window 1pixel
@@ -47,11 +47,8 @@ bindsym $mod+Shift+f focus parent; fullscreen; focus child
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start web browser
-bindsym Mod4+b exec firefox
-
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 
 # screen locker (first move to "safe" workspace without any chat app)
 bindsym Control+Mod1+l exec i3-msg workspace 1 && i3lock -c 111111 -d
@@ -163,6 +160,10 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# 4k scalling -.-
+bindsym $mod+F1 exec xrandr --output DP-4 --scale 1x1
+bindsym $mod+F2 exec xrandr --output DP-4 --scale 0.6x0.6
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
