@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: bloc
+# uuid: 
+# key: bloc
+# condition: t
+# --
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+@immutable
+abstract class $1Event {}
+
+@immutable
+abstract class $1State {}
+
+class ${2:InitState} extends $1State {}
+
+class ${1:BlocName}Bloc extends Bloc<$1Event, $1State> {
+    $1Bloc() : super($2());
+
+    @override
+    Stream<$1State> mapEventToState($1Event event) async* {
+        $0
+    }
+}

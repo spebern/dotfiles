@@ -1,0 +1,115 @@
+{
+    "tray": {
+        "spacing": 10
+    },
+    "temperature": {
+        "format": " {temperatureC}°C",
+        "format-critical": " {temperatureC}°C",
+        "critical-threshold": 70
+    },
+    "sway/workspaces": {
+        "format-icons": {
+            "urgent": ""
+        },
+        "format": "{icon}",
+        "all-outputs": true,
+        "disable-scroll": true
+    },
+    "sway/mode": {
+        "pango_markup": true,
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "pulseaudio": {
+        "tooltip": false,
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-middle": "pavucontrol-qt",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format-icons": {
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "format-muted": " MUTED",
+        "format-bluetooth": "{volume}% {icon}",
+        "format": "{icon} {volume}%"
+    },
+    "network": {
+        "interval": 10,
+        "tooltip-format-wifi": "{essid} {frequency}MHz Strength: {signaldBm}dBm ({signalStrength}%) IP: {ipaddr}/{cidr} ⬆: {bandwidthUpBits} ⬇: {bandwidthDownBits}",
+        "tooltip-format": "{ifname} {ipaddr}/{cidr} ",
+        "on-click-right": "wl-copy $(ip address show up scope global | grep inet6 | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c6-)",
+        "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
+        "format-disconnected": "Disconnected",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-wifi": " {essid} ({signalStrength}%)"
+    },
+    "memory": {
+        "tooltip": false,
+        "max-length": 10,
+        "format": " {}%",
+        "states": {
+            "critical": 90,
+            "warning": 60
+        },
+        "interval": 30
+    },
+    "cpu": {
+        "on-click": "alacritty -e htop",
+        "max-length": 10,
+        "format": " {}%",
+        "states": {
+            "critical": 90,
+            "warning": 60
+        },
+        "interval": 10
+    },
+    "clock": {
+        "tooltip": false,
+        "format": "{:%a %d %b %H:%M}"
+    },
+    "battery": {
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format-alt": "{icon} {time}",
+        "format": "{icon} {capacity}%",
+        "states": {
+            "critical": 15,
+            "warning": 30
+        }
+    },
+    "backlight": {
+        "on-scroll-down": "light -U 1",
+        "on-scroll-up": "light -A 1",
+        "format-icons": [
+            "",
+            ""
+        ],
+        "format": "{icon} {percent}%",
+        "device": "amdgpu_bl1"
+    },
+    "modules-right": [
+        "battery",
+        "pulseaudio",
+        "backlight",
+        "cpu",
+        "temperature",
+        "memory",
+        "tray"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+    "height": 20,
+    "layer": "top",
+    "spacing": 10
+}

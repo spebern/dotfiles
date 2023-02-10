@@ -1,0 +1,96 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Source Code Pro Medium, Arial, sans-serif;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: #000000;
+  border-bottom: 0px;
+  color: #EF453E;
+  transition-property: background-color;
+  transition-duration: 0s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces button {
+  background-color: transparent;
+  border-bottom: 0px;
+  color: #EF453E;
+  padding: 0 5px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: inherit;
+  border-bottom: 0px;
+  text-shadow: inherit;
+}
+
+#workspaces button.focused {
+  border-bottom: 3px solid #EF453E;
+}
+#workspaces button.urgent {
+  background-color: #EF453E;
+}
+
+#backlight,
+#battery {
+  color: #EF453E;
+}
+#clock {
+  color: #EF453E;
+}
+#cpu {
+  color: #EF453E;
+}
+#memory {
+  color: #EF453E;
+}
+#mode {
+  color: #EF453E;
+}
+#network {
+  color: #EF453E;
+}
+#pulseaudio {
+  color: #EF453E;
+}
+#temperature {
+  padding: 0 10px;
+  margin: 0 4px;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#battery {
+  color: #EF453E;
+}
+#battery.critical:not(.charging) {
+  color: #EF453E;
+}
+
+#network.disconnected {
+  color: #EF453E;
+}
+
+#pulseaudio.muted {
+  color: #EF453E;
+}
+
+#temperature {
+  color: #EF453E;
+}
+#temperature.critical {
+  color: #EF453E;
+}
