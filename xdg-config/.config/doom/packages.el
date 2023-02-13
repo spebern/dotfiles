@@ -61,3 +61,4 @@
 (package! lsp-pyright)
 (package! org-modern)
 (package! uuid)
+(package! treesit-auto)
