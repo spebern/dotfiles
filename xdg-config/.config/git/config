@@ -26,31 +26,11 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	clean = git-lfs clean -- %f
-[url "https://github.com/"]
-    insteadOf = gh:
-[url "git@github.com:"]
-    insteadOf = ssh+gh:
+[url "https://github.com/rust-lang/crates.io-index"]
+    insteadOf = https://github.com/rust-lang/crates.io-index
 [url "git@ssh.dev.azure.com:v3/pentlandfirth/WhizCart/"]
 	insteadOf = https://dev.azure.com/pentlandfirth/WhizCart/_git/
-#[url "git@github.com:hlissner/"]
-#    insteadOf = gh:/
-[url "https://gitlab.com/"]
-    insteadOf = gl:
-[url "https://gist.github.com/"]
-    insteadOf = gist:
-[url "https://bitbucket.org/"]
-    insteadOf = bb:
-[url "https://git.henrik.io"]
-    insteadOf = my:
 [diff "lisp"]
 	xfuncname = "^(((;;;+ )|\\(|([ \t]+\\(((cl-|el-patch-)?def(un|var|macro|method|custom)|gb/))).*)$"
 [diff "org"]
 	xfuncname = "^(\\*+ +.*)$"
-[credential "https://github.com"]
-	helper =
-	helper = !gh auth git-credential
-[credential "https://gist.github.com"]
-	helper =
-	helper = !gh auth git-credential
-[url "git@github.com:"]
-    insteadOf = https://github.com/
