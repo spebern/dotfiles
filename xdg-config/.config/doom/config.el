@@ -59,8 +59,8 @@
 
 (load! "helpers.el")
 
-(use-package! treesit-auto
-  :demand t
-  :config
-  (setq treesit-auto-install 'prompt)
-  (global-treesit-auto-mode))
+;(use-package! treesit-auto
+;  :demand t
+;  :config
+;  (setq treesit-auto-install 'prompt)
+;  (global-treesit-auto-mode))

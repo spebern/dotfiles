@@ -61,4 +61,6 @@
 (package! lsp-pyright)
 (package! org-modern)
 (package! uuid)
-(package! treesit-auto)
+
+(unpin! compat)
+(package! magit :pin "deb10e984e16201182b0569f7df7d30ec3b8afa9")
