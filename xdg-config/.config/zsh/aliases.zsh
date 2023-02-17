@@ -149,3 +149,5 @@ if (( $+commands[fzf] )); then
     sed -e 's/^[^a-z0-9]*//' | awk '{print $1}'
   }
 fi
+
+alias dc="docker-compose"
