@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 if [ ! -d ~/.config/emacs ]; then
-    git clone https://github.com/iyefrat/doom-emacs ~/.config/emacs
+    git clone https://github.com/doomemacs/doomemacs ~/.config/emacs
     cd ~/.config/emacs && git checkout bump-vertico
 fi
 
