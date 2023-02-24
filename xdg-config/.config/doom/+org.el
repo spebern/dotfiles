@@ -9,7 +9,7 @@
 
 (use-package! ob-http)
 
-(setq org-image-actual-width (list 550))
+(setq org-image-actual-width (list 800))
 
 (setq-default org-download-image-dir "~/Nextcloud/org/images")
 (setq-default org-roam-directory "~/Nextcloud/org")
