@@ -59,6 +59,18 @@
 
 (load! "helpers.el")
 
+(setq dap-auto-configure-mode t)
+(require 'dap-cpptools)
+
+(defun open-my-file ()
+  "Open my file"
+  (interactive)
+  (find-file "/path/to/file.txt"))
+
+(defun bold/open-slipbox ()
+  (interactive)
+  (find-file "~/Nextcloud/org/braindump/org/inbox.org"))
+
 ;(use-package! treesit-auto
 ;  :demand t
 ;  :config

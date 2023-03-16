@@ -5,3 +5,5 @@
 (map! :leader "A" #'org-agenda-list)
 
 (map! :leader "A" #'org-agenda-list)
+
+(map! :leader "=" #'bold/open-slipbox)
