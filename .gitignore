@@ -1,2 +1,3 @@
 *.zwc
 /xdg-config/.config/zsh/.p10k.zsh
+/xdg-config/.config/doom/modules/tools/chatgpt/secret.el

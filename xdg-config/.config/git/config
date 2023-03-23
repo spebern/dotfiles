@@ -34,3 +34,5 @@
 	xfuncname = "^(((;;;+ )|\\(|([ \t]+\\(((cl-|el-patch-)?def(un|var|macro|method|custom)|gb/))).*)$"
 [diff "org"]
 	xfuncname = "^(\\*+ +.*)$"
+[url "git@github.com:"]
+	insteadOf = https://github.com/

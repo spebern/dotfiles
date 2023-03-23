@@ -1,11 +1,10 @@
 ;;; tools/chatgpt/config.el -*- lexical-binding: t; -*-
 
-(use-package! chatgpt
-  :defer t
+(use-package! gptel
   :config
-  (unless (boundp 'python-interpreter)
-    (defvaralias 'python-interpreter 'python-shell-interpreter))
-  (setq chatgpt-repo-path (expand-file-name "straight/repos/ChatGPT.el/" doom-local-dir))
-  (set-popup-rule! (regexp-quote "*ChatGPT*")
-    :side 'bottom :size .5 :ttl nil :quit t :modeline nil)
-  :bind ("C-c q" . chatgpt-query))
+  (setq gptel-default-mode 'org-mode)
+  (setq gptel-api-key
+        (lambda () (efs/lookup-password :host "openai.com"))))
+
+;; What does this function do?
+(set-popup-rule! "^\\*ChatGPT" :size 0.7)

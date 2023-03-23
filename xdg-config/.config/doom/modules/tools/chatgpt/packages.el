@@ -1,5 +1,5 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; tools/chatgpt/packages.el
 
-(package! chatgpt
-  :recipe (:host github :repo "joshcho/ChatGPT.el" :files ("dist" "*.el")))
+(package! gptel
+  :recipe (:host github :repo "karthink/gptel" :files ("dist" "*.el")))
