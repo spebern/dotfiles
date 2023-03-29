@@ -1,0 +1,3 @@
+alias jc="sudo journalctl -xe"
+alias j="sudo journalctl"
+alias ju="sudo journalctl -u"
