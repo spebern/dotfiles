@@ -112,6 +112,7 @@
        copilot
        languagetool
        chatgpt
+       godbolt
 
        :lang
        ;;agda              ; types of types of types of types...
@@ -182,7 +183,7 @@
        :app
        ;;calendar
        ;;irc               ; how neckbeards socialize
-       ;;(rss +org)        ; emacs as an RSS reader
+       (rss +org)        ; emacs as an RSS reader
        ;;twitter           ; twitter client https://twitter.com/vnought
 
        :config
