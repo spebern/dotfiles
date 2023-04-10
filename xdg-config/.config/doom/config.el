@@ -72,3 +72,5 @@
   (find-file "~/Nextcloud/org/braindump/org/inbox.org"))
 
 (add-hook 'elfeed-search-mode-hook #'elfeed-update)
+
+(setq code-review-auth-login-marker 'forge)
