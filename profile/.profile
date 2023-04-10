@@ -11,7 +11,10 @@ export ZGEN_DIR="$XDG_DATA_HOME/zgenom"
 
 export PATH="$PATH:$XDG_BIN_HOME"
 export PATH="$PATH:$XDG_CONFIG_HOME/emacs/bin"
+export PATH="$PATH:$PYENV_ROOT/bin"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+export PYENV_ROOT="$HOME/.pyenv"
