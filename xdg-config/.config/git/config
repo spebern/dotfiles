@@ -7,8 +7,6 @@
 	defaultBranch = main
 [github]
 	user = spebern
-[gitlab]
-	user = spebern
 [push]
 	autoSquash = true
 [push]
