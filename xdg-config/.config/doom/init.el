@@ -82,7 +82,8 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       (spell +aspell +everywhere)             ; tasing you for misspelling mispelling
+       ;; (spell +aspell +everywhere)             ; tasing you for misspelling mispelling
+       spell2
 
        :tools
        ;;ansible
