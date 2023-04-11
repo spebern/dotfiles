@@ -74,3 +74,9 @@
 (add-hook 'elfeed-search-mode-hook #'elfeed-update)
 
 (setq code-review-auth-login-marker 'forge)
+
+(use-package! treesit-auto
+ :demand t
+ :config
+ (setq treesit-auto-install 'prompt)
+ (global-treesit-auto-mode))
