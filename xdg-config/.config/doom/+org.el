@@ -48,3 +48,5 @@
   ;;              '("L" "Protocol Link" entry (file "braindump/org/inbox.org")
   ;;                "* %? [[%:link][%:description]] \nCaptured On: %U"))
   (add-to-list 'org-cite-global-bibliography "~/Nextcloud/references.bib"))
+
+(after! org (plist-put org-format-latex-options :scale 0.75))
