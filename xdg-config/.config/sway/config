@@ -1,3 +1,6 @@
+include /etc/sway/config.d/50-systemd-user.conf
+include /etc/sway/config.d/*
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
@@ -8,7 +11,7 @@ set $right l
 
 set $term alacritty
 
-set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --
+set $menu wofi --show run -i | xargs swaymsg exec --
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec env RUST_BACKTRACE=1 swayrd > /tmp/swayrd.log 2>&1
 exec gnome-keyring-daemon --start
@@ -24,6 +27,7 @@ client.focused          $cl_high $cl_back $cl_fore $cl_high $cl_high
 client.focused_inactive $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.unfocused        $cl_back $cl_back $cl_fore $cl_back $cl_back
 client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
+
 
 
 exec way-displays > /tmp/way-displays.${XDG_VTNR}.${USER}.log 2>&1
@@ -245,5 +249,3 @@ bindsym $mod+Shift+Space exec env RUST_BACKTRACE=1 swayr switch-workspace-or-win
 bindsym $mod+c exec env RUST_BACKTRACE=1 swayr execute-swaymsg-command >> /tmp/swayr.log 2>&1
 
 bindsym $mod+Shift+c exec env RUST_BACKTRACE=1 swayr execute-swayr-command >> /tmp/swayr.log 2>&1
-
-include /etc/sway/config.d/50-systemd-user.conf
