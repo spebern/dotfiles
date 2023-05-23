@@ -66,3 +66,11 @@ if command -v pyenv 1>/dev/null 2>&1;
 then
   eval "$(pyenv init -)"
 fi
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+if command -v aws_completer 1>/dev/null 2>&1;
+then
+  complete -C '/usr/bin/aws_completer' aws
+fi

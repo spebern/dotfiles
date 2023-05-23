@@ -112,6 +112,11 @@ alias gst='git stash'
 alias gr='git reset HEAD'
 alias gv='git rev-parse'
 
+
+if (( $+commands[kubectl] )); then
+  alias k='kubectl'
+fi
+
 # fzf
 if (( $+commands[fzf] )); then
   __git_log () {
